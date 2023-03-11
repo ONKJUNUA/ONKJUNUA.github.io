@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+canvas {
+    margin-top: 50px;
+}
+
+button{
+    display: none;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    color:#fff;
+    border: 0;
+    font-size: 50px;
+    cursor: pointer;
+    transition: color .2s;
+}
+
+button:hover{
+    color:#808080;
+}
+
+#right{
+    margin-left:160px;
+    margin-top:80px;
+}
+
+#left{
+    margin-right:160px;
+    margin-top:80px;
+}
+
+#down{
+    margin-top:160px;
+}
+
+span {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 1000;
+    font-size: 2.5vw;
+    color: #fff;
+    position: absolute;
+    left: 4vw;
+    top: 50px;
+}
+
+.reverse {
+    left: 84vw;
+}
+
+.mid{
+    font-size: 5vw;
+    margin-top: 360px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.hide{
+    display: none;
+}
+
+.unselectable{
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+@media (min-width:2000px){
+    span {
+        font-size: 50px;
+    }
+    .mid{
+        font-size: 100px;
+    }
+}
+
+@media (max-width:1600px){
+    canvas{
+        width: 52vw;
+        margin-top: 50px;
+    }
+    .mid{
+        font-size: 7.5vw;
+        margin-top:50px;
+        top: 21vw;
+    }
+}
+
+@media (max-width:800px){
+    canvas{
+        width: 96vw;
+        margin-top: 20vw;
+    }
+    .mid{
+        font-size: 7vw;
+        margin-top:20vw;
+        top: 42vw;
+    }
+    span {
+        font-size: 5vw;
+        top: 20px;
+    }
+    .reverse {
+        left: 72vw;
+    }
+    button{
+        display: block;
+        top:120vw;
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+::-webkit-scrollbar-track {
+    background: rgb(27, 27, 27);
+  }
+::-webkit-scrollbar-thumb {
+    background: rgb(27, 27, 27);
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(27, 27, 27);
+  }

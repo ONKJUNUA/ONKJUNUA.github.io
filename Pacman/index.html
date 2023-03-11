@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <link rel="icon" href="img/icon.png">
+        <title>GamesSite | CapCap</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <span class="hide" id="levelEl">LEVEL: 01</span>
+    <span class="hide" id="scoreEl">SCORE: 0000</span>
+    <span class="hide" id="livesEl"><br>   LIVES: 7</span>
+    <span class="hide" id="timeEl"><br>TIME: 150</span>
+
+    <span class="unselectable hide" id="levelMid">LEVEL 1</span>
+    <span class="unselectable hide" id="scoreMid"></span>
+
+    <button id="left" onclick="left()">◄</button>
+    <button id="right" onclick="right()">►</button>
+    <button id="down" onclick="down()">▼</button>
+    <button id="up" onclick="up()">▲</button>
+    
+    <canvas></canvas>
+    <script src="index.js"></script>
+    </body>
+</html>
