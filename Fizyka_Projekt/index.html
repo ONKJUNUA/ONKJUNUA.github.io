@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symulacja Wahadła Prostego - Oskar Jasłowski</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-between;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .controls {
+            width: 45%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .controls label {
+            display: block;
+            margin-bottom: 15px;
+        }
+        .controls span {
+            font-weight: bold;
+        }
+        .controls input[type="range"] {
+            width: 100%;
+        }
+        .controls select {
+            width: 100%;
+            padding: 5px;
+        }
+        .simulation {
+            width: 45vw;
+            flex-direction: column;
+        }
+        canvas {
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <h1>Symulacja Wahadła Prostego</h1>
+        <br>
+        <label>Długość (m): <span id="length-value">0.5</span>
+            <input id="length" type="range" min="0.1" max="1.5" step="0.1" value="1">
+        </label>
+        <br>
+        <label>Waga (kg): <span id="mass-value">1</span>
+            <input id="mass" type="range" min="1" max="10" step="1" value="5">
+        </label>
+        <br>
+        <label>Kąt początkowy (°): <span id="angle-value">30</span>
+            <input id="angle" type="range" min="5" max="90" step="5" value="30">
+        </label>
+        <br>
+        <label>Grawitacja:
+            <select id="gravity">
+                <option value="9.81">Ziemia (9.81 m/s²)</option>
+                <option value="1.62">Księżyc (1.62 m/s²)</option>
+                <option value="274">Słońce (274 m/s²)</option>
+            </select>
+        </label>
+        <br>
+        <br>
+        <label>Czas (s): <span id="time-value">0</span>
+            <input id="time-slider" type="range" min="0" max="1" step="0.01" value="0">
+        </label>
+        <br><br>
+        <p>Obecny kąt: <span id="current-angle">0</span>°</p><br>
+        <p>Energia kinetyczna: <span id="kinetic-energy">0</span> J</p><br>
+        <p>Energia potencjalna: <span id="potential-energy">0</span> J</p><br>
+        <p>Czas pełnego ruchu: <span id="period-time">0</span> s</p>
+    </div>
+
+    <div class="simulation">
+        <button id="start-button">Start</button>
+        <button id="pause-button">Pauza</button>
+                                        Oskar Jasłowski Grupa H
+        <br><br>
+        <h2>Symulacja wahadła:
+        <canvas id="pendulumCanvas" width="700" height="400"></canvas>
+        <h2>Symulacja zmian energi:
+        <canvas id="energyChart" width="700" height="200"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
